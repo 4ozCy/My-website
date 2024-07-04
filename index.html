@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Code Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Code Translator</h1>
+        <div id="initialButtons">
+            <button id="showTextToCode">Text to Code</button>
+            <button id="showCodeToText">Code to Text</button>
+        </div>
+        <div id="textToCodeContainer" style="display: none;">
+            <textarea id="textInput" placeholder="Enter text here..."></textarea>
+            <button id="textToCodeButton">Translate to Code</button>
+            <textarea id="codeOutput" placeholder="Coded message will appear here..." readonly></textarea>
+            <backButton class="backButton">Back</backButton>
+        </div>
+        <div id="codeToTextContainer" style="display: none;">
+            <textarea id="codeInput" placeholder="Enter coded message here..."></textarea>
+            <button id="codeToTextButton">Translate to Text</button>
+            <textarea id="textOutput" placeholder="Decoded text will appear here..." readonly></textarea>
+            <backButton class="backButton">Back</backButton>
+        </div>
+        <div class="links">
+            <a href="privacy.html" target="_blank">Privacy Policy</a> | 
+            <a href="tos.html" target="_blank">Terms of Service</a> 
+            <p>have any questions? | Join our discord server <a href="https://discord.com/invite/JfGgPBHc5d" target="_blank">click here</a></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
