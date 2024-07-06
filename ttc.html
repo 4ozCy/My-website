@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text to Code Translator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .icon {
+          position: absolute;
+          top: 10px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .discord-icon {
+          left: 10px;
+          color: #5865F2;
+          overflow: hidden;
+        }
+        .github-icon {
+            left: 50px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <a href="https://discord.com/invite/JfGgPBHc5" target="_blank"><i class="fab fa-discord icon discord-icon"></i>
+            </a>
+        <a href="https://github.com/nozcyy" target="_blank"><i class="fab fa-github icon github-icon"></i>
+        </a>
         <h1>Text to Code Translator</h1>
         <div id="initialButtons">
             <button id="showTextToCode">Text to Code</button>
@@ -24,11 +46,6 @@
             <button id="codeToTextButton">Translate to Text</button>
             <textarea id="textOutput" placeholder="Decoded text will appear here..." readonly></textarea>
             <backButton class="backButton">Back</backButton>
-        </div>
-        <div class="links">
-            <p>wanna play math game? <a href="math.html" target="_blank">click here</a></p>
-            
-            <p>have any questions? | Join our discord server <a href="https://discord.com/invite/JfGgPBHc5d" target="_blank">click here</a></p>
         </div>
     </div>
     <script src="main.js"></script>
