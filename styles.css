@@ -1,38 +1,76 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Courier New, Monaco, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: url('bg1.gif');
+    background-size: cover;
+    background-position: center;
     margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .container {
+    padding: 30px;
+    position: relative;
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 600px;
+    border-radius: 10px;
+    width: 450px;
+    background: url('bg3.gif');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 header {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 2rem;
+    color: #000;
     margin-bottom: 10px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .scoreboard {
     display: flex;
     justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 10px;
-    background-color: #f5f5f5;
     border-radius: 5px;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+    opacity: 0;
 }
 
 .scoreboard p {
@@ -46,9 +84,11 @@ main {
 
 #game {
     padding: 20px;
-    background-color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     text-align: center;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+    opacity: 0;
 }
 
 #question {
@@ -59,25 +99,40 @@ main {
 input[type="number"] {
     width: 100%;
     max-width: 200px;
+    font-family: Courier New, Monaco, monospace;
     padding: 10px;
     margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid #ccc;
     border-radius: 5px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 button {
+    font-family: Courier New, Monaco, monospace;
     padding: 10px 20px;
     margin-top: 10px;
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.3);
     color: white;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+    opacity: 0;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgba(0, 123, 255, 0.6);
 }
 
 #result {
@@ -89,4 +144,26 @@ button:hover {
     margin-top: 10px;
     font-style: italic;
     color: #888;
-  }
+}
+
+p {
+    color: #000;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+    opacity: 0;
+}
+
+.icon {
+          position: absolute;
+          top: 10px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        .discord-icon {
+          left: 10px;
+          color: #5865F2;
+          overflow: hidden;
+        }
+        .github-icon {
+            left: 50px;
+            color: #333;
+}
