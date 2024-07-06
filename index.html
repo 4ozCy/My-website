@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Our Website!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: Courier New, Monaco, monospace;
+            background: url('bg1.gif');
+            background-size: cover;
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,52 +18,102 @@
             height: 100vh;
         }
         .container {
+            position: relative;
             text-align: center;
             padding: 30px;
-            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 450px;
+            background: url('bg.gif');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+        .icon {
+            position: absolute;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .discord-icon {
+            left: 10px;
+            color: #7289da;
+        }
+        .github-icon {
+            left: 50px;
+            color: #333;
         }
         h1 {
-            font-size: 36px;
             margin-bottom: 20px;
+            color: #000;
+            animation: slideInDown 1s ease forwards;
+            opacity: 0;
         }
         p {
             font-size: 18px;
             margin-bottom: 30px;
-            color: #333333;
+            color: #ffffff;
+            animation: fadeIn 2s ease forwards;
+            opacity: 0;
         }
         .btn-container {
             justify-content: center;
+            opacity: 0;
+            animation: fadeIn 2s ease 1s forwards;
         }
         .btn {
             display: inline-block;
             padding: 12px 24px;
             margin: 10px;
             font-size: 18px;
+            width: 150px;
             cursor: pointer;
-            background-color: #007bff;
+            background-color: rgba(0, 123, 255, 0.5);
             color: white;
             border: none;
             border-radius: 5px;
-            text-decoration: none; /* Remove underline */
-            outline: none; /* Remove outline */
+            text-decoration: none;
+            outline: none;
             transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #0056b3;
         }
+        
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Our Website!</h1>
-        <p>We're excited to have you here. Choose what you'd like to do:</p>
+        <a href="https://discord.com/invite/JfGgPBHc5d" target="_blank">
+            <i class="fab fa-discord icon discord-icon"></i>
+        </a>
+        <a href="https://github.com/nozcyy" target="_blank">
+            <i class="fab fa-github icon github-icon"></i>
+        </a>
+        <h1>Welcome to our Website</h1>
         <div class="btn-container">
             <a href="ttc.html" class="btn">Text to Code</a>
             <a href="math.html" class="btn">Math Game</a>
-            <a href="convert.html" class="btn">Text into files</a>
+            <a href="convert.html" class="btn"> Text ton File</a>
+            <p>Choose what you'd like to do</p>
         </div>
     </div>
 </body>
