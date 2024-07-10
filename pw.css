@@ -75,7 +75,7 @@ input[type="number"], textarea {
 
 button {
     padding: 10px 20px;
-    font-family: Courier New, Monaco, monospace
+    font-family: Courier New, Monaco, monospace;
     margin: 10px;
     border: none;
     background-color: rgba(0, 123, 255, 0.3);
